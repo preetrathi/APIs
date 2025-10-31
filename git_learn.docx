@@ -16,4 +16,15 @@
 6. Create Requirements.txt
     pip freeze > requirements.txt
 
-7. 4) Initialize Git and make first commit
+7. Initialize Git and make first commit
+    # add files (git will ignore things listed in .gitignore)
+        git add .
+    # commit
+        git commit -m "Initial commit: project skeleton, .gitignore and requirements"
+
+8. Create a GitHub repository
+
+9. Link local repo to GitHub and push
+    git branch -M main
+    git remote add origin https://github.com/preetrathi/APIs.git
+    git push -u origin main

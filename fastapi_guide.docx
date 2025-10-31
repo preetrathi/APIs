@@ -118,7 +118,10 @@ Query Paramter:
 
 Why Pydantic?
     Solving 2 big problems. (ref: why_pydantic.py)
+        1. to solve type validation issue which is not available in pyhthon. to achieve this we use pydantic.
+        2. Data validation issue
 
-
+How does pydantic work?
+    
 
 
