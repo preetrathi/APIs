@@ -28,3 +28,37 @@
     git branch -M main
     git remote add origin https://github.com/preetrathi/APIs.git
     git push -u origin main
+
+After 1st push
+
+10 Work flow: make changes and push
+    # check status
+        git status
+
+    # stage changes
+        git add .
+
+    # commit with message
+        git commit -m "Add new endpoint: GET /patients"
+
+    # push
+        git push
+
+11 How to clone and recreate the environment on another machine
+    git clone https://github.com/yourusername/fastapi-patients.git
+    cd fastapi-patients
+
+    # create venv locally
+    python -m venv api_env
+    .\api_env\Scripts\Activate
+
+    # install packages
+    pip install -r requirements.txt
+
+12 Extra good practices
+    Keep secrets out of repo: put them in a .env file and add .env to .gitignore.
+    Use README.md with project setup and run instructions (I can create a template README for you).
+    Commit often with clear messages.
+    Use branches for features and PRs for review.
+    Consider GitHub Actions for CI (optional later).
+
