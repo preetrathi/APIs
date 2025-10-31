@@ -122,6 +122,10 @@ Why Pydantic?
         2. Data validation issue
 
 How does pydantic work?
+    1. Define Pydantic Model: building a pydantic class, where defining the ideal schema of data. 
+        includes expected fields, their types, and any validation constraint.
+    2. Instantiate the model with raw input value: (Usually a dictionary or JSON like structure.)
+    3. Pass the validated object model to functions or use it throughout your codebase. 
     
 
 
