@@ -1,0 +1,124 @@
+
+What is an API?
+    Enable two software components - such as frontend and backend of an application - to communicate with each other using defined set of ules, protocols, and formats.
+    E.g: Kitchen Analogy
+
+Need for API (Why they Exists):
+    Before API application are like single application means there is singke directroy contains backend and frontend both. they both Exists in same directroy thats why they can easily communicate.(Monolithic Achitectiure). in that type of application our backend and fronted are tightly coupled. the main cause is that if there is change in any componet of pplication will effect on both fronted and backed.  
+    Main issue in this Monolithic architecture is its tightly coupled nature. to get access of some information to other user is the big problem. Mean need to give access of the dataabse to other third party. but giving direct access is not suggestale. but we can give the access to backed fucntion to that third party. but the thing is that backend is also contianed tightly coupled.
+    To solve this problem we use API, means we creating backend seperate from fronted. 
+    Backend layer --> API  --> Frontend  Can generate revenue to give access to use there data. Another problem solvd: 
+
+Why the response is given in JSON?
+    JSON is universal data format. because it can be understand by every langugue e.g: python , php,  java because the API consure may be using differnet tech so we can use a universal forammt.
+
+API in ML Perspective:
+    ML/DL model, we store our ML model binary format, 
+    ML Model <-- Backend <-- Frontend in a single application
+    Same issue is with ML to givr model to everyone.
+    differnece is that htere is ML model instead of dataabse
+
+--------------------------------------------------------------------------------------
+
+FastAPI:
+    is a modern, high-performance web framwork for building APIs and Python.
+    Made on 2 famous libraries, Starlette + Pydantic
+    Starlette: Manages how your API recieves requests & sends back responses.
+    Pydantic:  Data validation library. Used it check if the data is coming into your API is correct & in the right format.
+
+Philosophy of FastAPI:
+    In previous
+        1. Performace Issue: Repsonse time slow, latency issue
+        2. MUch bioler plate code. more code.
+    But in FastAPI:
+        1. Fast to run. Handle concurent User, low latency --  
+            There are two main things in each API, Code of PI & Web Server -- request type, endpoints, url, content type, content lengh. 
+            SGI: Server getway interface: It will create two way communication between server and API code. and request is in http format and code written in python wo python can understand that http request then we use SGI between them for communication. two types of SGI
+                WSGI: Web Server Getway Interface: Synchornus nature, one request at a time, blocking nature, when one request is entertain at that time other requests are blocked. Flask use WSGI, WSGI use werkzeug library. and webserver used by flask is gunicorn(performacne issues, i.o wait times and high latency)
+                ASGI: Asynscronus Server Getway Interface used by FastAPI, librariy used by ASGI is starlette, uvicorn(Asynschronus), FastAPI support Async and Await feature. means multi threading concept.
+        2. Fast to code thats why ist name is FastAPI: -- 
+            i.  Automatic input validation - 
+            ii. Auto-Generated Interactive Documentation
+            iii.Seamless Integration with moern ecosystem(ML/DL libraries, OAuth, JWT, SQL, Alchemy, Docker, Kubernetes etc.)
+
+
+
+============================================= FastAPI Setup. ====================================================
+Libraries:
+    fastapi, uvicorn, Pydantic
+
+
+===========================================  Building an API ====================================================
+import libraries
+create object for fast API
+define endpoints
+run server using command uvicorn filename:fastapiobjectname --reload
+url/docs will show auto generated Documentation    
+
+
+===========================================  HTTP Methods ====================================================
+software:
+    Static:
+        Less Interactive, one way communication
+    Dynamic:
+        More Interactive, two way communication
+    
+    C   -->     Post
+    R   -->     Get
+    U   -->     Put
+    D   -->     Delete
+
+    these all are HTTP Methods
+
+==================================================== Setting up directroy ====================================================
+Environment activation Error:
+    Get-ExecutionPolicy 
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+
+==================================================== PATH & QUERY PARAMETERS ====================================================
+Path Paramter: Path Parameters are dynamic segment of a URL path used to identify a specific resource.
+    e.g. localhost/8000/view/(3) here localhost/8000/view/ this is the static part we can not change URL, but (3) is the dynamic segment of URL 
+    can be change to alocalt a specific resouce with in the data.
+
+    Path Function:
+        used to provide meta data, validation, rules & Documentation hints for your path paramters in your API endpoints.
+        e.g. title, description, example
+        validation like: ge, gl, le, lt (greater then equaul and others), min_len, max_len, regex
+
+    HTTP Status codes:
+        2xx:    Success
+        3xx:    Redirection
+        4xx:    ClientError
+        5xx:    ServerError
+
+    HTTPException:
+        special built in exception in FastAPI, used to return custom error response when something went wrong in API.
+
+Query Paramter:
+    optional key-value pairs, appended to the end of URL, used to pass additional data to the server in an HTTP request. used for operation like sorting, filtering, searching, & pagination, without altering the endpoint path itself.
+    * ? mark as the start of query Paramter
+    * each parameter is a key value pairs
+    * Multiple parameter are seperated by &
+
+        Query(): 
+            utility function provided by FastAPI, to declare, validate & document query Paramter in your end point.
+                * set default value
+                * Enforce validation rules
+                * Add metadata like description, title examples
+
+
+
+=============================================== PYDANTIC COURSE ===================================================================
+
+* Data validation library,
+* python is not static typed language its a dynamic type langugue that why for data validation we are using Pydantic.
+* in producation level code type validation & data validation are very import
+* help in build data models, easily structure the complex data, 
+
+Why Pydantic?
+    Solving 2 big problems. (ref: why_pydantic.py)
+
+
+
+

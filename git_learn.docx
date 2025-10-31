@@ -1,0 +1,19 @@
+
+1. for checking git is installed or not:
+    git --version
+
+2. if not then installed from google
+
+3. configure git
+    git config --global user.name "preetrathi"
+    git config --global user.email "preetkumarmaheshwari@gmail.com"
+
+4. 🧩 Step 4: Continue with GitHub setup & Initialization
+    git init
+
+5. Create .gitignore file exclude your virtual environment and other common things
+
+6. Create Requirements.txt
+    pip freeze > requirements.txt
+
+7. 4) Initialize Git and make first commit

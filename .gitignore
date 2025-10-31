@@ -1,0 +1,32 @@
+# Virtual Environments
+api_env/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+
+# Editor / OS
+.vscode/
+.idea/
+*.suo
+*.user
+*.DS_Store
+
+# Logs, databases
+*.log
+*.sqlite3
+
+# Pytest cache
+.pytest_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/

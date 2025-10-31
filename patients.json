@@ -1,0 +1,62 @@
+{
+  "P001": {
+    "name": "Ali Khan",
+    "city": "Karachi",
+    "age": 32,
+    "gender": "Male",
+    "height_cm": 175,
+    "weight_kg": 72,
+    "bmi": 23.5,
+    "verdict": "Healthy"
+  },
+  "P002": {
+    "name": "Sara Ahmed",
+    "city": "Lahore",
+    "age": 28,
+    "gender": "Female",
+    "height_cm": 162,
+    "weight_kg": 68,
+    "bmi": 25.9,
+    "verdict": "Overweight"
+  },
+  "P003": {
+    "name": "Bilal Hussain",
+    "city": "Islamabad",
+    "age": 45,
+    "gender": "Male",
+    "height_cm": 180,
+    "weight_kg": 92,
+    "bmi": 28.4,
+    "verdict": "Overweight"
+  },
+  "P004": {
+    "name": "Ayesha Malik",
+    "city": "Faisalabad",
+    "age": 36,
+    "gender": "Female",
+    "height_cm": 158,
+    "weight_kg": 52,
+    "bmi": 20.8,
+    "verdict": "Healthy"
+  },
+  "P005": {
+    "name": "Usman Sheikh",
+    "city": "Hyderabad",
+    "age": 50,
+    "gender": "Male",
+    "height_cm": 170,
+    "weight_kg": 95,
+    "bmi": 32.9,
+    "verdict": "Obese"
+  },
+  "P006": {
+    "name": "Fatima Noor",
+    "city": "Multan",
+    "age": 24,
+    "gender": "Female",
+    "height_cm": 160,
+    "weight_kg": 48,
+    "bmi": 18.8,
+    "verdict": "Underweight"
+  }
+}
